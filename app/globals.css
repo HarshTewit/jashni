@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary — Warm Ecru / Cream */
+  --color-background: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #F5EFE6;
+
+  /* Accent — Terracotta (primary brand color) */
+  --color-primary: #C4714A;
+  --color-primary-light: #E8A882;
+  --color-primary-dark: #9B4F2E;
+
+  /* Secondary — Sage Green */
+  --color-secondary: #7D9B76;
+  --color-secondary-light: #B5CEAF;
+
+  /* Text */
+  --color-text-primary: #2C2416;
+  --color-text-secondary: #6B5C4E;
+  --color-text-muted: #A89880;
+
+  /* Utility */
+  --color-border: #E8DDD0;
+  --color-success: #5A8A5E;
+  --color-error: #C0392B;
+
+  /* Announcement bar */
+  --color-announcement: #2C2416;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-warm: var(--color-surface-warm);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-border: var(--color-border);
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+
+  --color-announcement: var(--color-announcement);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Announcement bar fade animation for mobile */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
 }
