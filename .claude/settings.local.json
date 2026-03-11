@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/harshit/Desktop/jashni/jashni && npm install zustand @supabase/supabase-js)"
+    ]
+  }
+}
