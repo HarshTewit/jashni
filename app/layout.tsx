@@ -4,6 +4,7 @@ import "./globals.css";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CartDrawer from "@/components/layout/CartDrawer";
 
 const playfair = Playfair_Display({
   variable: "--font-display",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CartDrawer />
       </body>
     </html>
   );
